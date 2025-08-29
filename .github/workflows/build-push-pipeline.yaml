@@ -20,5 +20,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ns-backend:${{ env.TAG_BRANCH }}-${{ github.run_number }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ns-backend:${{ github.ref_name }}-${{ github.run_number }}
 
