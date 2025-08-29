@@ -8,8 +8,8 @@ RUN npm ci --omit=dev
 FROM node:20-alpine
 WORKDIR /app
 ENV NODE_ENV=production \
-    PORT=5000
+    PORT=8000
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-EXPOSE 5000
+EXPOSE 8000
 CMD ["node", "server.js"]
