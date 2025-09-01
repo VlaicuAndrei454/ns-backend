@@ -51,7 +51,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const PORT = process.env.PORT || 5000;
 app.get('/api/v1/health', (_req, res) => res.status(200).json({status:'ok'}));
-const BACKEND_VERSION = "v0.2.0"; // ← hardcoded in backend code
+const BACKEND_VERSION = "v0.3.0"; // ← hardcoded in backend code
 
 app.get("/api/v1/version", (_req, res) => {
   res.json({ app: "backend", version: BACKEND_VERSION });
