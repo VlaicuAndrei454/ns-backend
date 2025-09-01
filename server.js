@@ -16,7 +16,9 @@ const app = express();
 // Middleware to handle CORS
 const allowedOrigins = [
   process.env.CLIENT_URL,      // e.g. http://localhost:3000
-  'http://localhost:5173'      // Vite's default dev server port
+  'http://localhost:5173',      // Vite's default dev server port
+  'http://localhost:8081',      // Add other allowed origins as needed
+  'http://neatspend.local'
 ];
 
 
